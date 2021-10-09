@@ -23,6 +23,10 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
 }
 
+.container__child {
+    padding: 80px 0;
+}
+
 
 /* Intro */
 .intro {
@@ -115,7 +119,8 @@ h1, h2, h3, h4, h5, h6 {
     transition: color .1s linear;
 }
 
-.nav__link:hover {
+.nav__link:hover,
+.nav__link.active {
     color: #fce38a;
 }
 
@@ -136,7 +141,8 @@ h1, h2, h3, h4, h5, h6 {
     transition: opacity .1s linear;
 }
 
-.nav__link:hover::after {
+.nav__link:hover::after,
+.nav__link.active::after {
     opacity: 1;
 }
 
@@ -162,4 +168,136 @@ h1, h2, h3, h4, h5, h6 {
 .btn:hover {
     background-color: #fff;
     color: #333;
+}
+
+
+/* Slider */
+.slider {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+
+.slider__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider__item {
+    width: 24%;
+    padding: 20px 0;
+    position: relative;
+
+    border-top: 3px solid #fff;
+
+    opacity: .5;
+
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.slider__num {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.slider__item.active {
+    opacity: 1;
+}
+
+.slider__item.active::before {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+
+    background-color: #f38181;
+
+    position: absolute;
+    top: -3px;
+    left: 0;
+    z-index: 1;
+}
+
+
+/* Section */
+/*.section__about {
+    padding: 80px 0;
+}*/
+
+.section__header {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto 80px;
+
+    text-align: center;
+}
+
+.section__suptitle {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 24px;
+    color: #333;
+}
+
+.section__title {
+    font-weight: 700;
+    font-size: 30px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.section__title::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    margin: 40px auto;
+
+    background-color: #f38181;
+}
+
+.section__text {
+    font-size: 15px;
+    color: #999;
+}
+
+
+/* About */
+.about__pictures {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about__pictures__item {
+    width: 380px;
+
+    background-color: #95e1d3;
+}
+
+.about__pictures__item:hover 
+.about__pictures__img {
+    transform: translate3d(
+        -10px,-10px,0);
+}
+
+.about__pictures__item:hover 
+.about__pictures__img img {
+    opacity: .1;
+}
+
+.about__pictures__img {
+    background: linear-gradient(
+        #f38181,#fce38a);
+
+    transition: transform .2s linear;
+}
+
+.about__pictures__img img {
+    display: block;
+    transition: opacity .2s linear;
 }
