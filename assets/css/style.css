@@ -234,6 +234,10 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
+.section__review {
+    background-color: #f8f8f8;
+}
+
 .section__suptitle {
     font-family: 'Kaushan Script', cursive;
     font-size: 24px;
@@ -263,30 +267,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* About */
-.about__pictures {
+/* Cards */
+.cards__pictures {
     display: flex;
     justify-content: space-between;
 }
 
-.about__pictures__item {
+.cards__pictures__item {
     width: 380px;
+}
 
+.cards__pictures__item__inner {
     background-color: #95e1d3;
 }
 
-.about__pictures__item:hover 
-.about__pictures__img {
+.cards__pictures__item:hover 
+.cards__pictures__img {
     transform: translate3d(
         -10px,-10px,0);
 }
 
-.about__pictures__item:hover 
-.about__pictures__img img {
+.cards__pictures__item:hover 
+.cards__pictures__img img {
     opacity: .1;
 }
 
-.about__pictures__img {
+.cards__pictures__img {
     position: relative;
     background: linear-gradient(
         #f38181,#fce38a);
@@ -294,12 +300,12 @@ h1, h2, h3, h4, h5, h6 {
     transition: transform .2s linear;
 }
 
-.about__pictures__img img {
+.cards__pictures__img img {
     display: block;
     transition: opacity .2s linear;
 }
 
-.about__pictures__text {
+.cards__pictures__text {
     width: 100%;
 
     position: absolute;
@@ -315,14 +321,34 @@ h1, h2, h3, h4, h5, h6 {
     transition: opacity .2s linear;
 }
 
-.about__pictures__item:hover 
-.about__pictures__text {
+.cards__pictures__item:hover 
+.cards__pictures__text {
     opacity: 1;
+}
+
+.cards__item__info {
+    text-align: center;
+
+    margin-top: 20px;
+}
+
+.cards__name {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.cards__prof {
+    font-size: 15px;
+    font-weight: 300;
+    font-style: italic;
+    color: #999;
 }
 
 
 /* Stats */
-.stats__about {
+.stats__cards {
     background-color: #95e1d3;
 }
 
@@ -447,8 +473,21 @@ hr {
     width: 45%;
 }
 
+.whatwedo__item--accordion{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .accordion__item {
     padding-left: 30px;
+    margin-bottom: 10px;
+}
+
+.accordion__item--active 
+.accordion__item__header::after {
+    transform: rotate(-45deg);
+    margin-top: -5px;
 }
 
 .accordion__item__title{
@@ -462,13 +501,155 @@ hr {
 
 .accordion__item__header {
     position: relative;
-    padding-bottom: 15px;
+    padding: 15px 20px;
+
+    border: 1px solid #e5e5e5;
+}
+
+.accordion__item__header::after{
+    content: "";
+    display: block;
+    height: 15px;
+    width: 15px;
+
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    z-index: 1;
+
+    transform: translateY(-50%)
+    rotate(135deg);
+
+    border-top: 3px solid #ccc;
+    border-right: 3px solid #ccc;
 }
 
 .accordion__item__icon {
     position: absolute;
+    top: 50%;
+    left: 20px;
+
+    transform: translateY(-50%);
 }
 
 .accordion__item__content {
-    padding-top: 15px;
+    padding: 20px;
+    font-weight: 300;
+
+    border: 1px solid #e5e5e5;
+    border-top: 0;
+
+    font-size: 15px;
+    font-style: italic;
+    color: #ccc;
+}
+
+
+/* Review */
+.review {
+    position: relative;
+    padding: 0 110px;
+}
+
+.review__photo {
+    position: absolute;
+    top: 0;
+    left: 110px;
+    z-index: 1;
+}
+
+.review__text {
+    padding-left: 210px;
+    margin-bottom: 10px;
+
+    font-weight: 300;
+    font-style: italic;
+    font-size: 20px;
+    color: #999;
+    
+}
+
+.review__author {
+    padding-left: 210px;
+
+    font-family: 'Kaushan Script', cursive;
+    font-size: 20px;
+    color: #333;
+}
+
+.review__author::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+
+    width: 60px;
+    height: 3px;
+    margin-right: 10px;
+
+    background-color: #f38181;
+}
+
+.review__btn {
+    font-size: 0;
+    color: transparent;
+
+    position: absolute;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+.review__btn::after {
+    content: "";
+    display: block;
+    height: 15px;
+    width: 15px;
+
+    border-top: 3px solid #ccc;
+    border-right: 3px solid #ccc;
+}
+
+.review__btn--prev {
+    left: 0;
+
+    transform: rotate(-135deg);
+}
+
+.review__btn--next {
+    right: 0;
+
+    transform: rotate(45deg);
+}
+
+
+/* Social */
+.social {
+    display: flex;
+    justify-content: center;
+}
+
+.social__item {
+    width: 55px;
+    height: 55px;
+    padding: 5px;
+
+    background-color: #fce38a;
+
+    border-right: 1px solid #f38181;
+
+    text-decoration: none;
+    color: #f38181;
+    font-size: 30px;
+
+    transition: background .2s linear,
+    color .2s linear;
+}
+
+.social__item:hover {
+    background-color: #f38181;
+    color: #fff;
+}
+
+.social__item:last-child {
+    border: 0;
 }

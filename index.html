@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5fd5c795a7.js" crossorigin="anonymous"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoGo</title>
@@ -15,7 +16,7 @@
                 <div class="header__logo">MoGo</div>
 
                 <nav class="nav">
-                    <a class="nav__link active" href="#">About</a>
+                    <a class="nav__link active" href="#">cards</a>
                     <a class="nav__link" href="#">Service</a>
                     <a class="nav__link" href="#">Work</a>
                     <a class="nav__link" href="#">Blog</a>
@@ -46,7 +47,7 @@
                     </div>
                     <div class="slider__item">
                         <span class="slider__num">03</span>
-                        about
+                        cards
                     </div>
                     <div class="slider__item">
                         <span class="slider__num">04</span>
@@ -58,7 +59,7 @@
     </div> <!--/intro-->
 
     <div class="sections">
-        <section class="section__about">
+        <section class="section__cards">
             <div class="container">
                 <div class="container__child">
                     <div class="section__header">
@@ -70,30 +71,30 @@
                             ut aliquip ex ea commodo consequat. </div>
                     </div>
 
-                    <div class="about__pictures">
-                        <div class="about__pictures__item">
-                            <div class="about__pictures__img">
+                    <div class="cards__pictures">
+                        <div class="cards__pictures__item">
+                            <div class="cards__pictures__img">
                                 <img src="assets/images/about/1.jpg" alt="">
-                                <div class="about__pictures__text">Super team</div>
+                                <div class="cards__pictures__text">Super team</div>
                             </div>
                         </div>
-                        <div class="about__pictures__item">
-                            <div class="about__pictures__img">
+                        <div class="cards__pictures__item">
+                            <div class="cards__pictures__img">
                                 <img src="assets/images/about/2.jpg" alt="">
-                                <div class="about__pictures__text">Super team</div>
+                                <div class="cards__pictures__text">Super team</div>
                             </div>
                         </div>
-                        <div class="about__pictures__item">
-                            <div class="about__pictures__img">
+                        <div class="cards__pictures__item">
+                            <div class="cards__pictures__img">
                                 <img src="assets/images/about/3.jpg" alt="">
-                                <div class="about__pictures__text">Super team</div>
+                                <div class="cards__pictures__text">Super team</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="stats__about">
+            <div class="stats__cards">
                 <div class="container">
                     <div class="stats__inner">
                         <div class="stat__item">
@@ -217,16 +218,141 @@
                             ut aliquip ex ea commodo consequat. </div>
                     </div>
                     <div class="whatwedo__content">
-                        <img class="whatwedo__item" src="http://placehold.it/570x380" alt="">
-                        <div class="whatwedo__item">
-                            <div class="accordion__item">
+                        <img class="whatwedo__item" src="assets/images/What_we_do_img.jpg" alt="">
+                        <div class="whatwedo__item whatwedo__item--accordion">
+                            <div class="accordion__item accordion__item--active">
                                 <div class="accordion__item__header">
                                     <img class="accordion__item__icon" src="assets/images/services/5.png" alt="">
                                     <div class="accordion__item__title">photography</div>
                                 </div>
                                 <div class="accordion__item__content">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius atque, ullam tempore enim quod amet ducimus officiis est mollitia fuga debitis ut, voluptatibus dolorum commodi aspernatur, veniam id sequi iure?
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                                 </div>
+                            </div>
+                            <div class="accordion__item">
+                                <div class="accordion__item__header">
+                                    <img class="accordion__item__icon" src="assets/images/services/3.png" alt="">
+                                    <div class="accordion__item__title">creativity</div>
+                                </div>
+                            </div>
+                            <div class="accordion__item">
+                                <div class="accordion__item__header">
+                                    <img class="accordion__item__icon" src="assets/images/services/2.png" alt="">
+                                    <div class="accordion__item__title">web design</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section__review">
+            <div class="container">
+                <div class="container__child">
+                    <div class="review">
+                        <a class="review__btn review__btn--prev" href="#">Prev</a>
+                        <a class="review__btn review__btn--next" href="#">Next</a>
+                        <img class="review__photo" src="http://placehold.it/145" alt=""></img>
+                        <div class="review__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus repellat nostrum dolor dolorum autem eaque, nobis accusamus cupiditate quis, nemo esse facere consectetur officiis, laboriosam tenetur tempore possimus temporibus perspiciatis.</div>
+                        <div class="review__author">Jon Doe</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="section__team">
+            <div class="container">
+                <div class="container__child">
+                    <div class="section__header">
+                        <h3 class="section__suptitle">Who we are</h3>
+                        <h2 class="section__title">meet our team</h2>
+                        <div class="section__text">Lorem ipsum dolor sit amet, consectetur adipiscing 
+                            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex ea commodo consequat. </div>
+                    </div>
+
+                    <div class="cards__pictures">
+                        <div class="cards__pictures__item">
+                            <div class="cards__pictures__item__inner">
+                                <div class="cards__pictures__img">
+                                    <img src="assets/images/team/1.jpg" alt="">
+                                    <div class="cards__pictures__text">
+                                        <div class="social">
+                                            <a class="social__item" href="#" target="_blank">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </a>
+                                            <a class="social__item" href="#" target="_blank">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                            <a class="social__item" href="#" target="_blank">
+                                                <i class="fab fa-pinterest-p"></i>
+                                            </a>
+                                            <a class="social__item" href="#" target="_blank">
+                                                <i class="fab fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cards__item__info">
+                                <div class="cards__name">Matthew Dix</div>
+                                <div class="cards__prof">Graphic Design</div>
+                            </div>
+                        </div>
+                        <div class="cards__pictures__item">
+                            <div class="cards__pictures__item__inner">
+                                <div class="cards__pictures__img">
+                                    <img src="assets/images/team/2.jpg" alt="">
+                                    <div class="cards__pictures__text">
+                                        <div class="social">
+                                            <a class="social__item" href="#" target="_blank">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </a>
+                                            <a class="social__item" href="#" target="_blank">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                            <a class="social__item" href="#" target="_blank">
+                                                <i class="fab fa-pinterest-p"></i>
+                                            </a>
+                                            <a class="social__item" href="#" target="_blank">
+                                                <i class="fab fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cards__item__info">
+                                <div class="cards__name">Christopher Campbell</div>
+                                <div class="cards__prof">Brand UX design</div>
+                            </div>
+                        </div>
+                        <div class="cards__pictures__item">
+                            <div class="cards__pictures__item__inner">
+                                <div class="cards__pictures__img">
+                                    <img src="assets/images/team/3.jpg" alt="">
+                                    <div class="cards__pictures__text">
+                                        <div class="social">
+                                            <a class="social__item" href="#" target="_blank">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </a>
+                                            <a class="social__item" href="#" target="_blank">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                            <a class="social__item" href="#" target="_blank">
+                                                <i class="fab fa-pinterest-p"></i>
+                                            </a>
+                                            <a class="social__item" href="#" target="_blank">
+                                                <i class="fab fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cards__item__info">
+                                <div class="cards__name">Michael Fertig</div>
+                                <div class="cards__prof">Developer</div>
                             </div>
                         </div>
                     </div>
